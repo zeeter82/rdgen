@@ -13,7 +13,12 @@ services:
       GHBRANCH: "master"
       PROTOCOL: "https"
       REPONAME: "rdgen"
+      SH_SECRET: ""
     ports:
       - "8000:8000"
     dns:
       - 8.8.8.8
+    volumes:
+      - ./exe:/opt/rdgen/exe
+      - ./png:/opt/rdgen/png
+      - ./temp_zips:/opt/rdgen/temp_zips
